@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/MarkusTarn/static-ip/issues"
   },
-  "homepage": "https://github.com/MarkusTarn/static-ip#readme"
+  "homepage": "https://github.com/MarkusTarn/static-ip#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
