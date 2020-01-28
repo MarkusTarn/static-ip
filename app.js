@@ -1,4 +1,4 @@
-const { port: servicePort } = require('./configuration').service;
+const { service: { port: servicePort } } = require('./configuration');
 const { writeFile } = require('fs');
 const { exec } = require('child_process');
 const express = require('express');
@@ -18,7 +18,7 @@ const reloadNginx = () => {
     exec('sudo nginx -t && sudo systemctl reload nginx', (err) => {
         if (err) console.error('Could not reload nginx', error);
         console.log('Nginx reloaded successfully');
-    })
+    });
 }
 
 /* Set routes */
