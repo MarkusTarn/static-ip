@@ -6,6 +6,7 @@
 2. [ Prequisits ](#prequisits)
 3. [ Server setup ](#server)
 4. [ Client setup ](#client)
+5. [ TODO ](#todo)
 
 <a name="description"></a>
 
