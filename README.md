@@ -73,3 +73,4 @@ NB! Make sure you have forwarded the client port in your home network!
 * Store map in file / redis cache
 * Multiple ports with one client
 * Forget to write tests
+* Authorisation
