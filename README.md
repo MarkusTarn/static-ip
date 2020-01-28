@@ -62,3 +62,13 @@ server {
 Now the client device will ping the public IP to your server after every configured interval.  
 You can access your network through domain or query network's public ip address if it has changed  
 NB! Make sure you have forwarded the client port in your home network!
+
+<a name="todo"></a>
+
+### TODO
+* Code cleanup
+* Sanitize payload
+* Create proxy folder
+* Store map in file / redis cache
+* Multiple ports with one client
+* Forget to write tests
