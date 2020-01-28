@@ -1,7 +1,15 @@
 # STATIC-IP
 
-### Proxy service for dynamic-IPs
+### Table Of Contents
+
+1. [ Description ](#description)
+2. [ Prequisits ](#prequisits)
+3. [ Server setup ](#server)
+4. [ Client setup ](#client)
+
 <a name="description"></a>
+
+### Proxy service for dynamic-IPs
 If you have a server with domain and you want to proxy requests from your local networks without static-IPs through your server's domain, then this service for you! 
 
 Service will listen to requests from clients, save client IPs and ports to forward in memory and update nginx conf.
@@ -11,15 +19,9 @@ GET `${domain}/${client name}`, for example: `www.example.com/myhome`
 * Or Proxy requests to your network through domain like this:  
  `${server domain}/proxy/${client name}`, for example: `www.example.com/proxy/myhome`
 
-### Table Of Contents
-
-1. [ Description ](#description)
-2. [ Prequisits ](#prequisits)
-3. [ Server setup ](#server)
-3. [ Client setup ](#client)
-
-#### Prequisits
 <a name="prequisits"></a>
+
+### Prequisits
 * Have nginx installed and configured. Check out [this tool](https://www.digitalocean.com/community/tools/nginx) to effortlessly configure nginx.
 * Create a `proxy` folder in nginx directory `mkdir /etc/nginx/proxy` (to store pass_proxy blocks)  
 * Make sure the service has priviledge to write in nginx directory and reload conf.
@@ -42,16 +44,17 @@ server {
     }
 }
 ```
-
-#### Server setup
 <a name="server"></a>
+
+### Server setup
 1. clone repo to your server `git clone https://github.com/MarkusTarn/static-ip.git`
 2. install dependencies `yarn`
 3. Change port in configuration file if necessary
 3. run service `yarn start`
 
-#### Client setup
 <a name="client"></a>
+
+### Client setup
 1. Save client.js to a device on your client network
 2. Fill out conf in your client.js file (line 3)
 3. Start client `node client.js`
